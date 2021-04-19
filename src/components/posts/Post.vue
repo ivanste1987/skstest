@@ -1,21 +1,21 @@
 <template>
-  <div class="post">
-    <header class="title">
-      <router-link :to="{ name: 'ThePostDescript', params: { id: post.id } }">
-        {{ post.title }}
+  <div class="post w-screen px-6  py-4 shadow drop-shadow-2xl">
+    <header class="title mb-2">
+      <router-link :to="{ name: 'ThePostDescript', params: { id: post.id } }" class="text-3xl font-black">
+        {{ post.title.charAt(0).toUpperCase() + post.title.slice(1) }}
       </router-link>
     </header>
     <article class="body">
-      <p>{{ post.body }}</p>
+      <p class="text-base leading-4">{{ post.body }}...</p>
     </article>
-    <footer>
-      <div class="col">
-        <div class="time">{{ time | formatDate  }}AM</div>
+    <footer class="flex flex-row justify-between mt-5 mb-4">
+      <div class="col flex flex-row items-center">
+        <div class="time uppercase">{{ time | formatDate  }}AM</div>
       </div>
-      <div class="col">
-        <figure>
-          <figcaption>{{ user.name }}</figcaption>
-          <img src="https://www.placecage.com/200/200" alt="usr_img" />
+      <div class="col ">
+        <figure class="flex flex-row items-center">
+          <figcaption class="mr-2 font-black">{{ user.name }}</figcaption>
+          <img src="https://via.placeholder.com/150" alt="usr_img" class="rounded-full w-9"/>
         </figure>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="min-w-full min-h-screen">
     <router-view />
   </div>
 </template>
@@ -13,4 +13,20 @@ export default {
 
 
 <style>
+html,
+body {
+  font-family: "Exo 2", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+input,
+button {
+  font-family: "Exo 2", sans-serif;
+}
 </style>

@@ -1,20 +1,20 @@
 <template>
-  <section>
-    <form @submit.prevent="trySingup">
+  <section class="container mx-auto text-center">
+    <form @submit.prevent="trySingup" class="p-2">
      
-      <div class="input-filed">
-        <label for="email">Email</label>
-        <input type="email" required v-model="user.email" />
+      <div class="input-filed flex justify-end items-baseline">
+        <label for="email" class="text-sm mr-2 self-end">Email</label>
+        <input type="email" required v-model="user.email" class="text-xl border-b border-black rounded-none bg-transparent  outline-none font-bold self-start font-bold pl-2 mb-1"/>
       </div>
-      <div class="input-filed">
-        <label for="password">Password</label>
-        <input type="password" required v-model="user.password" />
+      <div class="input-filed flex justify-end items-baseline">
+        <label for="password" class="text-sm mr-2 self-end">Password</label>
+        <input type="password" required v-model="user.password" class="text-xl border-b border-black rounded-none bg-transparent  outline-none font-bold self-start font-bold pl-2 mb-1"/>
       </div>
-      <div class="input-filed">
-        <label for="username">Username</label>
-        <input type="text" name="username" required v-model="user.name" />
+      <div class="input-filed flex justify-end items-baseline">
+        <label for="username" class="text-sm mr-2 self-end">Username</label>
+        <input type="text" name="username" required v-model="user.name" class="text-xl border-b border-black rounded-none bg-transparent  outline-none font-bold self-start font-bold pl-2 mb-1"/>
       </div>
-      <button type="submit">Singup</button>
+      <button type="submit" class="text-xl font-bold my-10 bg-white px-6 py-2">sing up</button>
     </form>
 
     <transition>

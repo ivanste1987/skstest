@@ -1,10 +1,20 @@
 <template>
-  <section>
-    <header>
-      <h1>winQuest</h1>
-      <button v-if="checkUser" @click="logoff">Logoff</button>
+  <section class="w-screen min-h-full bg-yellow">
+    <header class="w-screen sticky top-0 z-10 bg-yellow">
+      <div class="px-6  py-4 shadow drop-shadow-2xl">
+        <router-link to="/home">
+          <h1 class="text-4xl text-white font-bold">
+            win<span class="transform -rotate-12 translate-y-0 inline-block"
+              >Q</span
+            >uest
+          </h1>
+        </router-link>
+      </div>
+      <div class="px-6  py-4 shadow drop-shadow-2xl">
+        <button v-if="checkUser" @click="logoff">Sing out</button>
+      </div>
     </header>
-    <post-list></post-list>
+    <post-list class="mt-0"></post-list>
   </section>
 </template>
 
@@ -18,19 +28,18 @@ export default {
   created() {
     this.$store.dispatch("stayLoggedin");
   },
-   computed: {
+  computed: {
     checkUser() {
       return this.$store.getters.CheckUser;
     },
   },
-   methods: {
+  methods: {
     logoff() {
       localStorage.removeItem("token");
       this.$router.replace("/");
       this.$store.commit("HANDLE_LOGIN", false);
     },
   },
-  
 };
 </script>
 
