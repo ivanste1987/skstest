@@ -8,9 +8,7 @@ samo treba odraditi
 ```
 npm install
 ```
-i startovati server sa
-
-### Compiles and hot-reloads for development
+### i startovati server sa
 ```
 npm run serve
 ```
