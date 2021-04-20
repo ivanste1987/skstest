@@ -13,11 +13,14 @@ npm install
 npm run serve
 ```
 
-Korisnika mozete napraviti, za registraciju sam koristio API koji sam koristio na drugoj aplikaciji.
-A mozete se i ulogovati sa:
+Korisnika mozete napraviti.
+Za registraciju sam koristio API koji sam koristio na drugoj aplikaciji.
+
+## A mozete se i ulogovati sa:
+```
 username: win@quest.com 
 password: winquest
-
+```
 Ako treba neko objasnjenje slobodno me kontaktirajte.
 
 
