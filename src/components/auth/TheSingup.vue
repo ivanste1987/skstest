@@ -1,6 +1,6 @@
 <template>
-  <section class="container mx-auto text-center">
-    <form @submit.prevent="trySingup" class="p-2">
+  <section class="container mx-auto text-center ">
+    <form @submit.prevent="trySingup" class="p-2" >
       <div class="input-filed flex justify-end items-baseline">
         <label for="email" class="text-sm mr-2 self-end">Email</label>
         <input
@@ -35,10 +35,10 @@
     </form>
 
     <transition>
-      <handle-error :class="close ? 'show' : ''">
+      <handle-error :class="close ? 'transition duration-500 ease-in-out transform translate-y-0' : 'transition duration-500 ease-in-out transform  -translate-y-48'">
         <p>{{ this.SetMessage }}</p>
-        <button @click="closeModal" class="close-btn">
-          <i class="fas fa-times-circle fa-lg"></i>
+        <button @click="closeModal" class="close-btn text-xl font-bold mt-2 bg-white px-6 py-2">
+          close
         </button>
       </handle-error>
     </transition>
@@ -82,6 +82,7 @@ export default {
       }
     },
     closeModal() {
+      console.log('klik');
       this.close = false;
     },
   },

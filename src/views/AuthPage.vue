@@ -2,7 +2,7 @@
   <div
     class="container text-center min-w-full min-h-screen flex flex-col justify-center items-center bg-yellow"
   >
-    <header>
+    <header class="mb-4">
       <h1 class="text-7xl text-white font-bold">
             win<span class="transform -rotate-12 translate-y-0 inline-block"
               >Q</span

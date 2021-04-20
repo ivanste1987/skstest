@@ -2,7 +2,7 @@
   <section class="user-modal ">
     <header>
       <div
-        class="user-avatar flex flex-row justify-start items-center px-6 py-1 border-b border-gray-800"
+        class="user-avatar flex flex-row justify-start items-center px-6 py-1 border-b border-gray-800 bg-yellow"
       >
         <figure class="w-3/12 flex justify-end items-center" >
           <img
@@ -11,14 +11,14 @@
             class="rounded-full w-12 "
           />
         </figure>
-        <h2 class="w-9/12 ml-4 text-2xl font-black">{{ user.username }}</h2>
+        <h2 class="w-9/12 ml-4 text-2xl font-black ">{{ user.username }}</h2>
       </div>
     </header>
     <article
-      class="bg-yellow-light flex flex-col justify-start border-b border-gray-800"
+      class="bg-yellow-light flex flex-col justify-start shadow drop-shadow-2xl"
     >
       <div
-        class="user-data-content px-6 py-3 flex flex-row border-b border-gray-800"
+        class="user-data-content px-6 py-3 flex flex-row shadow drop-shadow-2xl"
       >
         <div class="user-data w-3/12 flex justify-end ">
           <p class="uppercase">Name</p>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div
-        class="user-data-content px-6 py-3 flex flex-row border-b border-gray-800"
+        class="user-data-content px-6 py-3 flex flex-row shadow drop-shadow-2xl"
       >
         <div class="user-data w-3/12 flex justify-end">
           <p class="uppercase">Address</p>
@@ -41,7 +41,7 @@
         </div>
       </div>
       <div
-        class="user-data-content px-6 py-3 flex flex-row border-b border-gray-800"
+        class="user-data-content px-6 py-3 flex flex-row border-b border-black"
       >
         <div class="user-data w-3/12 flex justify-end">
           <p class="uppercase">Company</p>

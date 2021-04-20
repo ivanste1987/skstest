@@ -11,6 +11,7 @@ const Store =  new Vuex.Store({
   state: {
     islogin: false,
     message: null,
+    singinMsg: null,
     allPosts: [],
     allComments: [],
     theUser: {}

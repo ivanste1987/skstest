@@ -1,5 +1,5 @@
 <template>
-  <div class="post w-screen px-6  py-4 ">
+  <div class="post w-12/12 px-6  py-4 ">
     <header class="title mb-2">
       <router-link :to="{ name: 'ThePostDescript', params: { id: post.id } }" class="text-3xl font-black">
         {{ post.title.charAt(0).toUpperCase() + post.title.slice(1) }}

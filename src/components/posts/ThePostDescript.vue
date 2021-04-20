@@ -1,6 +1,6 @@
 <template>
-  <section class="post-content">
-    <header class="sticky top-0 z-10 bg-yellow lg:w-6/12 lg:mx-auto">
+  <section class="post-content relative lg:drop-shadow-2xl lg:shadow-2xl">
+    <header class="sticky top-0 z-10 bg-yellow">
       <div class="px-6 py-4 shadow drop-shadow-2xl">
         <router-link to="/home">
           <h1 class="text-4xl text-white font-bold">
@@ -16,7 +16,7 @@
         <div class="col flex flex-row items-center">
           <div class="time uppercase">{{ time | formatDate }}AM</div>
         </div>
-        <div class="col ">
+        <div class="col">
           <figure class="flex flex-row items-center" @click="openUserModal">
             <figcaption class="mr-2 font-black">{{ user.name }}</figcaption>
             <img
@@ -28,22 +28,32 @@
         </div>
       </div>
     </header>
-    <article class="px-6 py-4 bg-yellow border-b border-gray-900 lg:flex lg:flex-col lg:w-6/12 lg:mx-auto">
+    <article
+      class="px-6 py-4 bg-yellow border-b border-gray-900 lg:flex lg:flex-col"
+    >
       <h2 class="text-2xl font-black">
         {{ post.title }}
       </h2>
       <p class="text-base leading-4">{{ post.body }}</p>
-      <p class="text-base leading-4 mt-4">Et iusto sed quo iure voluptatem occaecati omnis eligendi aut ad voluptatem doloribus vel accusantium quis pariatur molestiae porro eius odio et labore et velit aut</p>
-      <p class="text-base leading-4 mt-4">Et iusto sed quo iure voluptatem occaecati omnis eligendi aut ad voluptatem doloribus vel accusantium quis pariatur molestiae porro eius odio et labore et velit aut</p>
+      <p class="text-base leading-4 mt-4">
+        Et iusto sed quo iure voluptatem occaecati omnis eligendi aut ad
+        voluptatem doloribus vel accusantium quis pariatur molestiae porro eius
+        odio et labore et velit aut
+      </p>
+      <p class="text-base leading-4 mt-4">
+        Et iusto sed quo iure voluptatem occaecati omnis eligendi aut ad
+        voluptatem doloribus vel accusantium quis pariatur molestiae porro eius
+        odio et labore et velit aut
+      </p>
     </article>
-    <div class="px-6 py-4 bg-yellow-light border-b border-gray-900 lg:flex lg:w-6/12 lg:mx-auto">
+    <div class="px-6 py-4 bg-yellow-light border-b border-gray-900 lg:flex">
       <h3 class="text-blue text-2xl font-black">Comments</h3>
     </div>
 
     <article
       v-for="comment in comments"
       :key="comment.id"
-      class="comment p-6 bg-yellow-light border-b border-gray-900 flex lg:flex lg:w-6/12 lg:mx-auto"
+      class="comment p-6 bg-yellow-light border-b border-gray-900 flex lg:flex"
     >
       <figure class="flex justify-center items-start p-3 w-2/12">
         <img
@@ -62,26 +72,26 @@
         <p class="mt-2">{{ comment.body }}</p>
       </article>
     </article>
-   <transition name="appear">
-    <section
-      class="user-modal fixed top-0 left-0 bottom-0 right-0 z-30 bg-yellow lg:top-20  lg:w-6/12 lg:mx-auto"
-      v-if="openModal"
-    >
-      <div
-        class="close-section flex justify-end items-center px-6 py-3 shadow drop-shadow-2xl"
+    <transition name="appear">
+      <section
+        class="user-modal overflow-y-auto absolute top-0 left-0 bottom-0 right-0 z-30 bg-yellow lg:bg-white lg:pt-20 lg:bg-opacity-50"
+        v-if="openModal"
       >
-        <h1 class="text-3xl font-bold mr-6">
-          win<span class="transform -rotate-12 translate-y-0 inline-block"
-            >Q</span
-          >uest
-        </h1>
-        <button class="close-modal text-2xl" @click="openUserModal">
-          <i class="fas fa-times text-white self-center"></i>
-        </button>
-      </div>
-      <the-user :user="user" :posts="userPosts"></the-user>
-    </section>
-   </transition>
+        <div
+          class="close-section bg-yellow flex justify-end items-center px-6 py-1 border-b border-black"
+        >
+          <h1 class="text-3xl font-bold mr-6">
+            win<span class="transform -rotate-12 translate-y-0 inline-block"
+              >Q</span
+            >uest
+          </h1>
+          <button class="close-modal text-2xl" @click="openUserModal">
+            <i class="fas fa-times text-white self-center"></i>
+          </button>
+        </div>
+        <the-user :user="user" :posts="userPosts"></the-user>
+      </section>
+    </transition>
   </section>
 </template>
 

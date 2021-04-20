@@ -12,7 +12,7 @@ const actions = {
       localStorage.setItem("token", response.data.token);
     } catch (error) {
       console.log(error.response.data.error);
-      context.commit("HANDLE_MESSAGE", error.response.data.error);
+      context.commit("HANDLE_SINGIN_MESSAGE", error.response.data.error);
     }
   },
   /*Singup Action */

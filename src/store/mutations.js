@@ -3,6 +3,9 @@ const mutations = {
   HANDLE_LOGIN(state, payload) {
     state.islogin = payload.islogin;
   },
+  HANDLE_SINGIN_MESSAGE(state, payload) {
+    state.singinMsg = payload;
+  },
   HANDLE_MESSAGE(state, payload) {
     state.message = payload;
     console.log(state.message);

@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="min-w-full min-h-screen">
+  <div id="app" class="min-w-full min-h-screen bg-yellow overflow-hidden ">
     <transition name="appear">
-      <router-view />
+      <router-view class="lg:w-5/12 lg:mx-auto"/>
     </transition>
   </div>
 </template>
@@ -28,7 +28,9 @@ h6,
 p,
 span,
 input,
-button {
+button,
+label,
+a {
   font-family: "Exo 2", sans-serif;
 }
 

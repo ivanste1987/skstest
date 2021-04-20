@@ -5,6 +5,9 @@ const getters = {
   SetMessage(state) {
     return state.message;
   },
+  SetSinginMsg(state){
+    return state.singinMsg
+  },
   GetAllPosts(state) {
     return state.allPosts;
   },
