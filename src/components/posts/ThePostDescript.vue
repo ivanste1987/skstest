@@ -17,7 +17,7 @@
           <div class="time uppercase">{{ time | formatDate }}AM</div>
         </div>
         <div class="col">
-          <figure class="flex flex-row items-center" @click="openUserModal">
+          <figure class="flex flex-row items-center" @click="openUserModal" style="cursor: pointer;">
             <figcaption class="mr-2 font-black">{{ user.name }}</figcaption>
             <img
               src="https://via.placeholder.com/150"
