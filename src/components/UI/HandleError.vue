@@ -16,10 +16,10 @@ export default {
 dialog {
   position: fixed;
   z-index: 9999;
-  width: 30%;
+  width: 99%;
   height: auto;
-  bottom: 0%;
-  left: 0%;
+  top: 0.5%;
+  left: 0.5%;
   background-color: #393638;
   display: flex;
   flex-direction: row;
@@ -44,7 +44,7 @@ dialog p {
 @keyframes show-message {
   0% {
     opacity: 0;
-    transform: translateY(101%);
+    transform: translateY(-101%);
     
   }
   100% {

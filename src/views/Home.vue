@@ -1,6 +1,6 @@
 <template>
-  <section class="w-screen min-h-full bg-yellow">
-    <header class="w-screen sticky top-0 z-10 bg-yellow">
+  <section class="w-screen min-h-full ">
+    <header class="w-screen sticky top-0 z-10 bg-yellow lg:w-6/12 lg:mx-auto">
       <div class="px-6  py-4 shadow drop-shadow-2xl">
         <router-link to="/home">
           <h1 class="text-4xl text-white font-bold">

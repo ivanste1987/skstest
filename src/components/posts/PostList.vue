@@ -1,7 +1,7 @@
 <template>
   <section>
-    <div v-for="post in GetAllPosts" :key="post.id">
-      <post :post="post" :userID="post.userId"></post>
+    <div v-for="post in GetAllPosts" :key="post.id" class="">
+      <post :post="post" :userID="post.userId" class="lg:w-6/12 lg:mx-auto bg-yellow border-b border-black"></post>
       <!-- napravi random prikaz postova ali da prvi bude user 1 -->
     </div>
   </section>

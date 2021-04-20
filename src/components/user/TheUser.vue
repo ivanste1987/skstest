@@ -1,8 +1,8 @@
 <template>
-  <section class="user-modal">
+  <section class="user-modal ">
     <header>
       <div
-        class="user-avatar flex flex-row justify-start items-center px-6 py-3 border-b border-gray-800"
+        class="user-avatar flex flex-row justify-start items-center px-6 py-1 border-b border-gray-800"
       >
         <figure class="w-3/12 flex justify-end items-center" >
           <img

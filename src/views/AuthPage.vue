@@ -1,8 +1,13 @@
 <template>
-
-  <div class="container text-center min-w-full min-h-screen flex flex-col justify-center items-center bg-yellow" >
+  <div
+    class="container text-center min-w-full min-h-screen flex flex-col justify-center items-center bg-yellow"
+  >
     <header>
-      <h1 class="inline-block text-7xl font-bold text-white mb-4 ">win<h1 class="transform -rotate-12 translate-y-0 inline-block">Q</h1>uest</h1>
+      <h1 class="text-7xl text-white font-bold">
+            win<span class="transform -rotate-12 translate-y-0 inline-block"
+              >Q</span
+            >uest
+          </h1>
     </header>
     <article id="login-page">
       <the-singin v-if="toggleForms"></the-singin>
@@ -27,7 +32,7 @@ export default {
       toggleForms: true,
     };
   },
-  
+
   methods: {
     changeForm() {
       this.toggleForms = !this.toggleForms;

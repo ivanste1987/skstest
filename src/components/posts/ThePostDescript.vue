@@ -1,7 +1,7 @@
 <template>
-  <section class="post-content bg-yellow">
-    <header class="sticky top-0 z-10 bg-yellow">
-      <div class="px-6 py-6 shadow drop-shadow-2xl">
+  <section class="post-content">
+    <header class="sticky top-0 z-10 bg-yellow lg:w-6/12 lg:mx-auto">
+      <div class="px-6 py-4 shadow drop-shadow-2xl">
         <router-link to="/home">
           <h1 class="text-4xl text-white font-bold">
             win<span class="transform -rotate-12 translate-y-0 inline-block"
@@ -16,7 +16,7 @@
         <div class="col flex flex-row items-center">
           <div class="time uppercase">{{ time | formatDate }}AM</div>
         </div>
-        <div class="col">
+        <div class="col ">
           <figure class="flex flex-row items-center" @click="openUserModal">
             <figcaption class="mr-2 font-black">{{ user.name }}</figcaption>
             <img
@@ -28,41 +28,43 @@
         </div>
       </div>
     </header>
-    <article class="px-6 py-4 border-b border-gray-900">
+    <article class="px-6 py-4 bg-yellow border-b border-gray-900 lg:flex lg:flex-col lg:w-6/12 lg:mx-auto">
       <h2 class="text-2xl font-black">
         {{ post.title }}
       </h2>
       <p class="text-base leading-4">{{ post.body }}</p>
+      <p class="text-base leading-4 mt-4">Et iusto sed quo iure voluptatem occaecati omnis eligendi aut ad voluptatem doloribus vel accusantium quis pariatur molestiae porro eius odio et labore et velit aut</p>
+      <p class="text-base leading-4 mt-4">Et iusto sed quo iure voluptatem occaecati omnis eligendi aut ad voluptatem doloribus vel accusantium quis pariatur molestiae porro eius odio et labore et velit aut</p>
     </article>
-    <div class="px-6 py-4 bg-yellow-light border-b border-gray-900">
+    <div class="px-6 py-4 bg-yellow-light border-b border-gray-900 lg:flex lg:w-6/12 lg:mx-auto">
       <h3 class="text-blue text-2xl font-black">Comments</h3>
     </div>
 
     <article
       v-for="comment in comments"
       :key="comment.id"
-      class="comment p-6 bg-yellow-light border-b border-gray-900 flex"
+      class="comment p-6 bg-yellow-light border-b border-gray-900 flex lg:flex lg:w-6/12 lg:mx-auto"
     >
-      <figure class="flex justify-center items-start p-3 w-3/12">
+      <figure class="flex justify-center items-start p-3 w-2/12">
         <img
           src="https://via.placeholder.com/150"
           alt="usr_img"
-          class="rounded-full w-10"
+          class="rounded-full w-12"
         />
       </figure>
       <base-spinner v-if="isLoading"></base-spinner>
-      <article class="p-3 w-9/12 flex flex-col justify-center items-start">
+      <article class="p-3 w-10/12 flex flex-col justify-center items-start">
         <p class="text-xs font-black">
           <span class="text-blue">{{ comment.email.split("@")[0] }}</span>
           commented on
           <span class="time uppercase">{{ time | formatDate }}</span>
         </p>
-        <p>{{ comment.body }}</p>
+        <p class="mt-2">{{ comment.body }}</p>
       </article>
     </article>
-
+   <transition name="appear">
     <section
-      class="user-modal fixed top-0 left-0 bottom-0 right-0 z-30 bg-yellow"
+      class="user-modal fixed top-0 left-0 bottom-0 right-0 z-30 bg-yellow lg:top-20  lg:w-6/12 lg:mx-auto"
       v-if="openModal"
     >
       <div
@@ -79,6 +81,7 @@
       </div>
       <the-user :user="user" :posts="userPosts"></the-user>
     </section>
+   </transition>
   </section>
 </template>
 
@@ -112,11 +115,10 @@ export default {
       const postByID = this.GetAllPosts.find(
         (post) => post.id == this.$route.params.id
       );
-      /**resava cartAt of undifined */
       this.post = {
         userId: postByID.userId,
         title: postByID.title.charAt(0).toUpperCase() + postByID.title.slice(1),
-        body: postByID.body,
+        body: postByID.body.charAt(0).toUpperCase() + postByID.title.slice(1),
       };
       this.getTheUser(this.post.userId);
     },
