@@ -1,24 +1,28 @@
 # skstest
 
+Sto se tice startovanja testa,
+posle skidanja na lokalni racunar,
+samo treba odraditi 
+
 ## Project setup
 ```
 npm install
 ```
+i startovati server sa
 
 ### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Korisnika mozete napraviti, za registraciju sam koristio API koji sam koristio na drugoj aplikaciji.
+A mozete se i ulogovati sa:
+username: win@quest.com 
+password: winquest
 
-### Lints and fixes files
-```
-npm run lint
-```
+Ako treba neko objasnjenje slobodno me kontaktirajte.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+
