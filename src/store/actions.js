@@ -11,7 +11,6 @@ const actions = {
       context.commit("HANDLE_LOGIN", { islogin: true });
       localStorage.setItem("token", response.data.token);
     } catch (error) {
-      console.log(error.response.data.error);
       context.commit("HANDLE_SINGIN_MESSAGE", error.response.data.error);
     }
   },
@@ -63,6 +62,7 @@ const actions = {
       );
       context.commit("SET_ALL_POSTS", response.data);
     } catch (error) {
+      /*Ovde bi hendlovao greske sa servera koja stignu */
       console.log(error);
     }
   },
@@ -75,6 +75,7 @@ const actions = {
       );
       context.commit("SET_COMMENTS", response.data);
     } catch (error) {
+      /*Ovde bi hendlovao greske sa servera koja stignu */
       console.log(error);
     }
   },
@@ -87,6 +88,7 @@ const actions = {
       );
       context.commit("SET_USER", response.data);
     } catch (error) {
+      /*Ovde bi hendlovao greske sa servera koja stignu */
       console.log(error);
     }
   },

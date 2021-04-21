@@ -2,7 +2,7 @@
   <section class="container mx-auto text-center ">
     <form @submit.prevent="trySingup" class="p-2" >
       <div class="input-filed flex justify-end items-baseline">
-        <label for="email" class="text-sm mr-2 self-end">Email</label>
+        <label for="email" class="text-sm mr-2 self-end">Username</label>
         <input
           type="email"
           required
@@ -20,7 +20,7 @@
         />
       </div>
       <div class="input-filed flex justify-end items-baseline">
-        <label for="username" class="text-sm mr-2 self-end">Username</label>
+        <label for="username" class="text-sm mr-2 self-end">Name</label>
         <input
           type="text"
           name="username"
